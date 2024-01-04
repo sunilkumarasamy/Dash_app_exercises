@@ -9,6 +9,7 @@ app = dash.Dash(__name__)
 # Create sample data
 np.random.seed(42)
 data = np.random.normal(loc=0, scale=1, size=(100, 2))
+print(data)
 df = pd.DataFrame(data, columns=['X', 'Y'])
 df['R'] = np.sqrt(df['X']**2 + df['Y']**2)
 
@@ -45,4 +46,4 @@ app.layout = html.Div([
 
 # Run the app
 if __name__ == '__main__':
-    app.run_server(debug=True,port=8051)
+    app.run_server(debug=True,port=8049)
